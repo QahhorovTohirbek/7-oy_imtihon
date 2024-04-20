@@ -1,0 +1,22 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<section class="section">
+  <div class="section-header">
+    <h1>Dashboard</h1>
+  </div>
+<form method="POST">
+<div class="form-group">
+    <label>Xodim</label>
+    {% csrf_token %}
+    <input style='margin-bottom:20px;' type="text" class="form-control" name="first_name">
+    <input style='margin-bottom:20px;' type="text" class="form-control" name="last_name">
+    <button type="submit" class="btn btn-success rounded-pill">Yaratish</button>
+</div>
+</form>
+
+</section>
+
+{% endblock %}
